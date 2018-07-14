@@ -22,7 +22,7 @@ body {
   display: flex;
   /* flex-direction: row;
   flex-wrap: wrap; */
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
   /* align-content: center; */
@@ -34,6 +34,7 @@ body {
   padding: 10px;
   border: 5px solid black;
   margin: 10px;
+  order: -2;
 }
 
 .item-2 {
@@ -52,7 +53,8 @@ body {
   padding: 10px;
   border: 5px solid black;
   margin: 10px;
-  height: 250px;
+  /* align-self: flex-start; */
+  align-self: stretch;
 }
 
 .item-4 {
@@ -63,6 +65,7 @@ body {
   margin: 10px;
   width: 300px;
   height: 300px;
+  order: -1;
 }
 
 .item-5 {
@@ -72,6 +75,10 @@ body {
   border: 5px solid black;
   margin: 10px;
   width: 350px;
+  height: 200px;
+  /* flex-shrink: 0;
+  flex-basis: 10%; */
+  flex: 0 1 auto;
 }
 
 .item-6 {
@@ -81,4 +88,5 @@ body {
   border: 5px solid black;
   margin: 10px;
   width: 350px;
+  flex-shrink: 0;
 }
